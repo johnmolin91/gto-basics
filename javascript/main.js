@@ -57,7 +57,7 @@ var s2 = 13;
 // var allCards = ['cA', 'dA', 'hA', 'sA', 'cK', 'dK', 'hK', 'sK', 'cQ', 'dQ', 'hQ', 'sQ', 'cJ', 'dJ', 'hJ', 'sJ', 'cT', 'dT', 'hT', 'sT', 'c9', 'd9', 'h9', 's9', 'c8', 'd8', 'h8', 's8', 'c7', 'd7', 'h7', 's7', 'c6', 'd6', 'h6', 's6', 'c5', 'd5', 'h5', 's5', 'c4', 'd4', 'h4', 's4', 'c3', 'd3', 'h3', 's3', 'c2', 'd2', 'h2', 's2'];
 
 function deal() {
-    var allCards = ['aAc', 'aAd', 'aAh', 'aAs', 'bKc', 'bKd', 'bKh', 'bKs', 'cQc', 'cQd', 'cQh', 'cQs', 'dJc', 'dJd', 'dJh', 'dJs', 'eTc', 'eTd', 'eTh', 'eTs', 'f9c', 'f9d', 'f9h', 'f9s', 'g8c', 'g8d', 'g8h', 'g8s', 'h7c', 'h7d', 'h7h', 'h7s', 'i6c', 'i6d', 'i6h', 'i6s', 'j5c', 'j5d', 'j5h', 'j5s', 'k4c', 'k4d', 'k4h', 'k4s', 'l3c', 'l3d', 'l3h', 'l3s', 'm2c', 'm2d', 'm2h', 'm2s'];
+    var allCards = ['Ac', 'Ad', 'Ah', 'As', 'Kc', 'Kd', 'Kh', 'Ks', 'Qc', 'Qd', 'Qh', 'Qs', 'Jc', 'Jd', 'Jh', 'Js', 'Tc', 'Td', 'Th', 'Ts', '9c', '9d', '9h', '9s', '8c', '8d', '8h', '8s', '7c', '7d', '7h', '7s', '6c', '6d', '6h', '6s', '5c', '5d', '5h', '5s', '4c', '4d', '4h', '4s', '3c', '3d', '3h', '3s', '2c', '2d', '2h', '2s'];
     var hand = [];
     var ourFirst = allCards[Math.floor(Math.random() * 52)];
     allCards.splice(allCards.indexOf(ourFirst), 1);
@@ -137,7 +137,7 @@ function deal() {
         // console.log(combos);
         for (i = 0; i < combos.length; i++) {
             var cardString = combos[i].toString();
-            fiveCardHand.push(cardString.slice(0, 19));
+            fiveCardHand.push(cardString.slice(0, 14));
             i++;
         };
         console.log(fiveCardHand);
