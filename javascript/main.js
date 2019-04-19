@@ -50,15 +50,24 @@ function deal() {
         cards[i] = cards[j];
         cards[j] = tmp;
     }
+
+    function compareCards(a, b) {
+        return a - b
+    }
+
+    function sortHand(origHand) {
+        // compare function
+    }
     
     function getCombos(input) {
         var counter = [],
             combos = [],
             cards = input.slice(0, 7),
             length = cards.length,
-            hand = {
+            handObj = {
                 fiveCardHand:[],
-                handStrength:[]
+                sortedHand:[],
+                handStrength:[],
             },
             i;
     
@@ -79,13 +88,14 @@ function deal() {
                 i++;
             }
         }
+
         // console.log(combos);
-        for (var i = 0; i < combos.length; i++) {
+        for (var i = 0; i < combos.length; i+=240) {
             var cardString = combos[i].toString();
-            hand.fiveCardHand.push(cardString.slice(0, 14));
-            hand.handStrength.push("high card " + hand.fiveCardHand[i].charAt(0));
+            handObj.fiveCardHand.push(cardString.slice(0, 14));
+            // hand.handStrength.push("high card ");
         };
-        console.log(hand);
+        console.log(handObj);
         return combos;
     };
 
