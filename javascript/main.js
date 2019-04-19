@@ -56,7 +56,10 @@ function deal() {
             combos = [],
             cards = input.slice(0, 7),
             length = cards.length,
-            fiveCardHand = [],
+            hand = {
+                fiveCardHand:[],
+                handStrength:[]
+            },
             i;
     
         for (i = 0; i < length; i++) {
@@ -77,12 +80,12 @@ function deal() {
             }
         }
         // console.log(combos);
-        for (i = 0; i < combos.length; i++) {
+        for (var i = 0; i < combos.length; i++) {
             var cardString = combos[i].toString();
-            fiveCardHand.push(cardString.slice(0, 14));
-            i++;
+            hand.fiveCardHand.push(cardString.slice(0, 14));
+            hand.handStrength.push("high card " + hand.fiveCardHand[i].charAt(0));
         };
-        console.log(fiveCardHand);
+        console.log(hand);
         return combos;
     };
 
